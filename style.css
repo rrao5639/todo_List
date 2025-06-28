@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#task-input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 2px solid #ccc;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+#add-task {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #667eea;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s;
+}
+
+#add-task:hover {
+  background-color: #5a67d8;
+}
+
+#task-list {
+  list-style: none;
+  max-height: 300px; /* Set desired scrollable height */
+  overflow-y: auto;  /* Enables vertical scroll */
+  padding-right: 5px; /* Avoid content hiding behind scrollbar */
+}
+
+/* Optional: Add a custom scrollbar (for better aesthetics) */
+#task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f5f9;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.task:hover {
+  background: #e2e8f0;
+}
+
+
+.task.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task span {
+  cursor: pointer;
+}
+
+.delete {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.delete:hover {
+  color: darkred;
+}
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
